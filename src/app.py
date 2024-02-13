@@ -1,10 +1,12 @@
 from flask import Flask
+from flask_cors import CORS
 from config import config
 
 from routes import Movie
 
 app = Flask(__name__)
 
+CORS(app, resources={"*"})
 
 
 def page_not_found(error):
