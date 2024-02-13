@@ -1,7 +1,15 @@
 from flask import Blueprint, jsonify
 
+# Models
+from models.MovieModel import MovieModel
+
 main = Blueprint('movie_blueprint', __name__)
 
 @main.route('/')
 def get_movies():
-    return jsonify({'message': 'Movies List'})
+    try:
+        movies = MovieModel.get_movies()
+        print(movies)
+        return jsonify(movies)
+    except Exception as ex:
+        return jsonify({'message1': str(ex) }),500
