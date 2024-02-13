@@ -21,7 +21,6 @@ class MovieModel():
         except Exception as ex:
             raise Exception(ex)
 
-
     @classmethod
     def get_movie(self,id):
         try:
@@ -42,8 +41,6 @@ class MovieModel():
         except Exception as ex:
             raise Exception(ex)
 
-
-
     @classmethod
     def add_movie(self,movie):
         try:
@@ -61,8 +58,6 @@ class MovieModel():
             return affected_rows
         except Exception as ex:
             raise Exception(ex)
-        
-        
         
     @classmethod
     def update_movie(self,movie):
@@ -82,7 +77,6 @@ class MovieModel():
             return affected_rows
         except Exception as ex:
             raise Exception(ex)
-    
     
     @classmethod
     def delete_movie(self,movie):
