@@ -14,7 +14,6 @@ if __name__ == '__main__':
     app.config.from_object(config['development'])
     
     #Blueprints
-    
     app.register_blueprint(Movie.main, url_prefix='/api/movies')
     
     # Error Handlers
